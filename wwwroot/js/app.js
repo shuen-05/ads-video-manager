@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
   loadNetworkInfo();
   loadData();
 
+  // Theme selector
+  const themeSelect = document.getElementById('themeSelect');
+  if (themeSelect) {
+    const currentTheme = localStorage.getItem('selected-theme') || 'theme-midnight';
+    themeSelect.value = currentTheme;
+    themeSelect.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      document.documentElement.className = selected;
+      localStorage.setItem('selected-theme', selected);
+    });
+  }
+
   // Upload button
   document.getElementById('uploadVideoBtn').addEventListener('click', () => {
     document.getElementById('videoFileInput').click();
