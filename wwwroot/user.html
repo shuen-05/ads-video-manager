@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('selected-theme');
+      if (savedTheme) {
+        document.documentElement.className = savedTheme;
+      }
+    })();
+  </script>
 </head>
 <body class="user-page">
   <div class="app">
@@ -25,7 +33,17 @@
           <h1>Ad Manager</h1>
         </div>
       </div>
-      <div class="header-right">
+      <div class="header-right" style="display: flex; gap: 12px; align-items: center;">
+        <div class="theme-selector">
+          <select id="themeSelect" class="theme-select" title="Choose color scheme">
+            <option value="theme-midnight">🌌 Midnight</option>
+            <option value="theme-sunset">🌅 Sunset Glow</option>
+            <option value="theme-emerald">🌲 Emerald Cyber</option>
+            <option value="theme-nord">❄️ Nord Frost</option>
+            <option value="theme-sakura">🌸 Sakura Dream</option>
+            <option value="theme-auralight">☀️ Aura Light</option>
+          </select>
+        </div>
         <div class="user-identity" id="userIdentity">
           <div class="user-avatar-small" id="userAvatarSmall"></div>
           <span id="userNameHeader">Identifying...</span>
