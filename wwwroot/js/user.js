@@ -11,6 +11,18 @@ let currentVideo = null;
 document.addEventListener('DOMContentLoaded', () => {
   identify();
 
+  // Theme selector
+  const themeSelect = document.getElementById('themeSelect');
+  if (themeSelect) {
+    const currentTheme = localStorage.getItem('selected-theme') || 'theme-midnight';
+    themeSelect.value = currentTheme;
+    themeSelect.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      document.documentElement.className = selected;
+      localStorage.setItem('selected-theme', selected);
+    });
+  }
+
   // Auto-poll for updates every 5 seconds
   setInterval(checkForUpdates, 5000);
 });
