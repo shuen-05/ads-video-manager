@@ -15,7 +15,13 @@ To run and use this project, you need:
 
 ## 2. How to Run
 
-### Run from Source Code (For Developers)
+### Option A: Quick Start (For Normal Users)
+If you just want to run the server without setting up developer tools:
+1. Go to the **Releases** page of this repository and download the latest release ZIP (e.g., `Ads_video_signage.zip`).
+2. Extract the ZIP file to a folder on your machine.
+3. Double-click **`ManagementUI.exe`** to launch the server! (No .NET installation required).
+
+### Option B: Run from Source Code (For Developers)
 If you cloned the source code from this repository and have the **.NET 10 SDK** installed:
 1. **Open a Terminal**: Open a command prompt or terminal in the project directory:
    ```bash
