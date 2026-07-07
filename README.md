@@ -25,7 +25,7 @@ If you just want to run the server without setting up developer tools:
 If you cloned the source code from this repository and have the **.NET 10 SDK** installed:
 1. **Open a Terminal**: Open a command prompt or terminal in the project directory:
    ```bash
-   cd ads-video-signage
+   cd ads-video-manager
    ```
 2. **Run the Application**:
    ```bash
